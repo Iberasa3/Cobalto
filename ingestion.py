@@ -42,3 +42,7 @@ def extract_and_save(tickers, db_name):
 
     conn.close()
     print(f"\nProcess completed. Database created at: {os.path.abspath(db_name)}")
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+

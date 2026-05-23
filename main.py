@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# main.py
+from ingestion import extract_and_save, TICKERS, DB_NAME
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def run_pipeline():
+    print("Iniciando el pipeline de datos del Nasdaq...")
+
+    # 1. Fase de Ingesta
+    print("\n--- FASE 1: INGESTA ---")
+    extract_and_save(TICKERS, DB_NAME)
+
+    # Aquí en el futuro pondremos:
+    # 2. Fase de Feature Engineering
+    # 3. Fase de Entrenamiento/Predicción
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    run_pipeline()
