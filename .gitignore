@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/
+
+# Data
+datasets/raw/*
+datasets/interim/*
+datasets/processed/*
+
+# Keep directory structure
+!datasets/raw/.gitkeep
+!datasets/interim/.gitkeep
+!datasets/processed/.gitkeep
+
+# Local databases / artifacts
+*.db
+*.sqlite
+*.sqlite3
+
+# ML artifacts
+mlruns/
+models/
